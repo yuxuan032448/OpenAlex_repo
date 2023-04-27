@@ -8,5 +8,6 @@ setup(
     maintainer_email="yuxuanl4@andrew.cmu.edu",
     license="MIT",
     packages=["s23openalex"],
+    entry_points={"console_scripts": ["oa = s23openalex.command_util:main"]},
     long_description="s23openalex about bibtex and RIS attributes.",
 )
