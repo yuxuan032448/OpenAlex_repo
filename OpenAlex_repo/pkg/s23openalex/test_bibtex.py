@@ -1,9 +1,8 @@
+# pylint: disable=missing-module-docstring
 """
 This test file test work.ris function is correct or not
 """
-import sys
-sys.path.append('.')
-from works import Works
+from .works import Works
 
 REF_BIBTEX = """@article{kitchin-2015-examples-effective,
  author = {John R. Kitchin},

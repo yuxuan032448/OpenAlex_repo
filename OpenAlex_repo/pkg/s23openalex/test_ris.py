@@ -1,9 +1,11 @@
+
+# pylint: disable=missing-module-docstring
 """
 This test file test work.ris function is correct or not
 """
-import sys
-sys.path.append('.')
-from works import Works
+
+
+from .works import Works
 
 
 REF_RIS = """TY  - JOUR

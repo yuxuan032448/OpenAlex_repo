@@ -1,8 +1,6 @@
-"""Python file for command line utility."""
+# pylint: disable=missing-module-docstring
 
-import sys
-sys.path.append('.')
-from works import Works
+from .works import Works
 
 
 def main(oaid, entry):

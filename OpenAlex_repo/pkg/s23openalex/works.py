@@ -1,4 +1,5 @@
 
+# pylint: disable=missing-module-docstring
 import time
 import base64
 import bibtexparser
