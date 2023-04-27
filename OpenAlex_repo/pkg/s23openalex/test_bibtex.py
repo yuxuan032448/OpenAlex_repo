@@ -1,23 +1,27 @@
-"""Test for ris attribute."""
-from s23openalex import Works
+"""
+This test file test work.ris function is correct or not
+"""
+import sys
+sys.path.append('.')
+from works import Works
+
+REF_BIBTEX = """@article{kitchin-2015-examples-effective,
+ author = {John R. Kitchin},
+ doi = {10.1021/acscatal.5b00538},
+ journal = {ACS Catalysis},
+ number = {6},
+ pages = {3894-3899},
+ title = {Examples of Effective Data Sharing in Scientific Publishing},
+ url = {https://doi.org/10.1021/acscatal.5b00538},
+ volume = {5},
+ year = {2015}
+}
+"""
 
 
-REF_RIS = """TY  - JOUR
-AU  - John R. Kitchin
-PY  - 2015
-TI  - Examples of Effective Data Sharing in Scientific Publishing
-JO  - ACS Catalysis
-VL  - 5
-IS  - 6
-SP  - 3894
-EP  - 3899
-DO  - https://doi.org/10.1021/acscatal.5b00538
-ER  -"""
-
-
-def test_ris():
-    """Test function for ris."""
-    work = Works("https://doi.org/10.1021/acscatal.5b00538")
-    assert REF_RIS == work.ris
-    print("test ris success!")
-
+def test_bibtex():
+    """
+    Test the bibtex property of the Works class have the correct output.
+    """
+    works = Works("https://doi.org/10.1021/acscatal.5b00538")
+    assert REF_BIBTEX == works.bibtex

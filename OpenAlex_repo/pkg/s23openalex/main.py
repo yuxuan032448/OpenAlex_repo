@@ -1,6 +1,8 @@
 """Python file for command line utility."""
 
-from s23openalex import Works
+import sys
+sys.path.append('.')
+from works import Works
 
 
 def main(oaid, entry):

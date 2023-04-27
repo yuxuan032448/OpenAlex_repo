@@ -1,5 +1,9 @@
-"""Test for ris attribute."""
-from s23openalex import Works
+"""
+This test file test work.ris function is correct or not
+"""
+import sys
+sys.path.append('.')
+from works import Works
 
 
 REF_RIS = """TY  - JOUR
@@ -16,7 +20,8 @@ ER  -"""
 
 
 def test_ris():
-    """Test function for ris."""
+    """
+    Test the ris property of the Works class have the correct output.
+    """
     work = Works("https://doi.org/10.1021/acscatal.5b00538")
     assert REF_RIS == work.ris
-    print("test ris success!")
